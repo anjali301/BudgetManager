@@ -1,0 +1,44 @@
+.btn3 {
+    margin-left: 5px;
+    letter-spacing: 2px;
+    font-family: 'Texturina';
+    font-weight: 700;
+    /* background-color: #004fe0; */
+}
+form {
+    margin-left:50px;
+    margin-right:400px;
+}
+
+a {
+    font-size:20px;    
+}
+.alert {
+    width:400px;
+    margin-top:50px;
+    margin-left:440px;
+}
+
+.user::after, .pass::after {
+    content: "*";
+    color: red;
+}
+
+.login-form {
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px lightgray;
+    padding: 20px;
+    width: 600px;
+    margin-top: 80px;
+    margin-left: 450px;
+}
+
+/* .form-group.pass .form-control {
+    padding-bottom: 20px;
+} */
+
+a {
+    text-align: center;
+    padding-left: 120px;
+}

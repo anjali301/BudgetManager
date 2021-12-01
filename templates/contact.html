@@ -1,0 +1,103 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4cafaf;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #31db6a;
+}
+
+
+.container {
+  border-radius: 5px;
+  
+  padding: 10px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.bud{
+  height: 450px;
+  width: 500px;
+}
+
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+   
+    margin-top: 0;
+  }
+}
+</style>
+
+<body>
+
+
+<div class="container">
+  <div style="text-align:center">
+    <h3>MANAGE YOUR SPENDING, SAVE MONEY</h3>
+
+  </div>
+  <div class="row">
+    <div class="column image">
+      <img class="bud" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-h532e4k4j5uke5ff20vhv6at10-20180708043835.Medi.jpeg" style="width:100%">
+    </div>
+    <div class="column">
+      <form action="{% url 'thanks' %}">
+        <div class="form-group">
+        <div class="row">
+          <div class="column">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          </div>
+          <div class="column">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          </div>
+        </div>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+{% endblock %}

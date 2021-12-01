@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+{% if user.is_authenticated %}
+    <br>
+    <h1 style="text-align:center">Thanks for contacting us. </h1>
+    <h1 style="text-align: center">Click the button to be redirected to dashboard</h1>
+    <br>
+    <form style="margin-left:600px" action="{% url 'managebudget' %}">
+        <button class="btn btn-lg btn-dark" type="submit">Go Back</button>
+    </form>
+{% else %}
+    <br>
+    <h1 style="text-align:center">Thanks for contacting us. </h1>
+    <h1 style="text-align: center">Click the button to be redirected to home page</h1>
+    <br>
+    <form style="margin-left:600px" action="{% url 'home' %}">
+        <button class="btn btn-lg btn-dark" type="submit">Go Back</button>
+</form>
+{% endif %}
+{% endblock %}

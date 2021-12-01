@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <div class="container-fluid">
+        <span class="wel">Welcome &nbsp; to </span>
+        <span class="bud">Budget Manager</span>
+        <a href="{% url 'register' %}">
+            <button class="btn btn-dark btn-lg" type="submit">Get Started</button>
+        </a>
+    </div>
+{% endblock %}
